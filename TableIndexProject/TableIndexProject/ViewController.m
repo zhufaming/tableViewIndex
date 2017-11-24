@@ -22,6 +22,10 @@
     NSArray *charArray = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K"];
     indexV.indexArray = charArray;
      [self.view addSubview:indexV];
+    indexV.block = ^(int index) {
+        //返回数组下标
+        //NSLog([NSString stringWithFormat:@"%d",index]);
+    };
 }
 
 

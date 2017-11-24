@@ -66,7 +66,7 @@
 -(void)tapTitleViewAction:(UITapGestureRecognizer *)sender
 {
     CGPoint point = [sender locationInView:self.titileView];
-    NSLog(@"handleSingleTap!pointx:%f,y:%f",point.x,point.y);
+   // NSLog(@"handleSingleTap!pointx:%f,y:%f",point.x,point.y);
     
     _showView.hidden = NO;
     //判断状态
@@ -88,7 +88,7 @@
 -(void)panViewAction:(UIPanGestureRecognizer *)sender
 {
     CGPoint point = [sender locationInView:self.titileView];
-    NSLog(@"panSingle!pointx:%f,y:%f",point.x,point.y);
+    //NSLog(@"panSingle!pointx:%f,y:%f",point.x,point.y);
     _showView.hidden = NO;
     //判断状态
     if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
@@ -125,6 +125,10 @@
         index = (int) _indexArray.count-1;
     }
     _selectLab.text = _indexArray[index];
+    //block 返回
+    if ([self block]) {
+        self.block(index);
+    }
 }
 
 -(void)setIndexArray:(NSArray *)indexArray
