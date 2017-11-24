@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FMTableIndexView">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="368"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXd-NX-Ezl">
+                    <rect key="frame" x="120" y="0.0" width="35" height="368"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="hI3-f2-EID"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rod-X3-mLx">
+                    <rect key="frame" x="70" y="0.0" width="40" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umR-IR-jmv">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="umR-IR-jmv" secondAttribute="trailing" id="CcF-mI-POO"/>
+                        <constraint firstItem="umR-IR-jmv" firstAttribute="leading" secondItem="rod-X3-mLx" secondAttribute="leading" id="Clf-aA-BQO"/>
+                        <constraint firstAttribute="height" constant="40" id="ZkI-De-y4H"/>
+                        <constraint firstAttribute="bottom" secondItem="umR-IR-jmv" secondAttribute="bottom" id="b4x-vB-MZt"/>
+                        <constraint firstAttribute="width" constant="40" id="e1X-9C-daA"/>
+                        <constraint firstItem="umR-IR-jmv" firstAttribute="top" secondItem="rod-X3-mLx" secondAttribute="top" id="h8s-cD-Jd8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="eXd-NX-Ezl" firstAttribute="leading" secondItem="rod-X3-mLx" secondAttribute="trailing" constant="10" id="93G-5M-eMy"/>
+                <constraint firstItem="eXd-NX-Ezl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Sqj-M1-ddz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eXd-NX-Ezl" secondAttribute="bottom" id="TLJ-EZ-Ly2"/>
+                <constraint firstItem="eXd-NX-Ezl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lng-e0-4bd"/>
+                <constraint firstItem="rod-X3-mLx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lw6-Bh-W0M"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="selectLab" destination="umR-IR-jmv" id="a6m-aA-PVC"/>
+                <outlet property="showVTop" destination="lw6-Bh-W0M" id="HbB-tr-0KU"/>
+                <outlet property="showView" destination="rod-X3-mLx" id="1xM-24-2Ca"/>
+                <outlet property="titileView" destination="eXd-NX-Ezl" id="kMJ-8s-0is"/>
+            </connections>
+            <point key="canvasLocation" x="-60.5" y="111"/>
+        </view>
+    </objects>
+</document>
